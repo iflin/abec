@@ -20,7 +20,7 @@
         var yAxis_bar = d3.axisLeft(y_bar)
             .ticks(10);
 
-        var svg = d3.select("#people_paper_bar").append("svg")
+        var svg_bar = d3.select("#people_paper_bar").append("svg")
             .attr("width", width_bar + margin_bar.left + margin_bar.right)
             .attr("height", height_bar + margin_bar.top + margin_bar.bottom)
             .append("g")
@@ -38,12 +38,12 @@
                 return d.frequency;
             })]);
 
-            svg.append("g")
+            svg_bar.append("g")
                 .attr("class", "x axis")
                 .attr("transform", "translate(0," + height_bar + ")")
                 .call(xAxis_bar);
 
-            svg.append("g")
+            svg_bar.append("g")
                 .attr("class", "y axis")
                 .call(yAxis_bar)
                 .append("text")
@@ -55,7 +55,7 @@
                 .style("text-anchor", "end")
                 .text("人數");
 
-            svg.selectAll(".bar")
+            svg_bar.selectAll(".bar")
                 .data(data)
                 .enter().append("rect")
                 .attr("class", "bar")
