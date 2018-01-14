@@ -22,7 +22,7 @@ var xAxis_line = d3.axisBottom(x_line).tickFormat(d3.format('.4'));
 var yAxis_line = d3.axisLeft(y_line).tickFormat(d3.format('.2s'));
 line_chart.append('g').call(yAxis_line); 
 line_chart.append('g').attr('transform', 'translate(0,' + height_line + ')').call(xAxis_line);
-line_chart.append('text').html('歷屆投稿文章數量').attr('id','gtitle').attr('x', 20).attr('y', -5);//圖標題
+//line_chart.append('text').html('歷屆投稿文章數量').attr('id','gtitle').attr('x', 20).attr('y', -5);//圖標題
   
 // Load the data and draw a chart
 let states, tipBox;

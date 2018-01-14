@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="css/main.css">
-    
+
     <script src="js/d3.min.js"></script>
-    
+
     <title>動物行為研討會回顧</title>
 
     <!--    <meta property="og:image:url" content="http://g0v.github.io/cuora/img/fb-share.png" />-->
@@ -83,11 +83,11 @@
         <script src="bar/bar.js"></script>
         <style>
             #people_paper_bar .bar {
-                fill: steelblue;
+                fill: #624343;
             }
             
             #people_paper_bar .bar:hover {
-                fill: brown;
+                fill: steelblue;
             }
             
             #people_paper_bar .label {
@@ -140,6 +140,13 @@
     <div id=p3>
         <h2>研究者投稿數與合作關係</h2>
         <p>這個網狀圖顯示，投稿超過5篇以上的研究者，他們之間的合作關係。圓圈大小代表這位研究者的投稿篇數，有連線的研究者，代表曾經共同在研討會發表文章，合作發表文章數越多，連結線寬度越寬。</p>
+        <p><b>註：由於中英文姓名比對問題，此圖資料只包含有用中文姓名發表的文章。如果只用英文名發表的文章，則尚未被計入，所以此圖結果會低估真實情形。</b></p>
+
+        <svg id="people_net" width="960" height="600"></svg>
+        <script src="js/d3-selection-multi.v1.js"></script>
+        <script type="text/javascript" src="js/net.js"></script>
+
+
     </div>
 
     <!---舉辦地點-->
@@ -163,7 +170,7 @@
         <style>
             iframe {
                 height: 460px;
-                margin-left: 2%;
+                margin-left: 10%;
                 margin-right: auto;
                 width: 80%;
             }
