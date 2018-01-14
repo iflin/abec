@@ -1,0 +1,26 @@
+[
+  {
+    "name": "總投稿數量",
+    "show": true,
+    "color": "#ff9797",
+    "tagY": 320,
+    "history": [{"year":1993,"population":17},
+        {"year":1994,"population":21},{"year":1995,"population":21},{"year":1996,"population":30},{"year":1997,"population":44},{"year":1998,"population":72},{"year":1999,"population":75},{"year":2000,"population":87},{"year":2001,"population":89},{"year":2002,"population":104},{"year":2003,"population":96},{"year":2004,"population":142},{"year":2005,"population":111},{"year":2006,"population":150},{"year":2007,"population":169},{"year":2008,"population":228},{"year":2009,"population":226},{"year":2010,"population":299},{"year":2011,"population":288},{"year":2012,"population":291},{"year":2013,"population":292},{"year":2014,"population":277},{"year":2015,"population":323},{"year":2016,"population":288},{"year":2017,"population":320}]
+
+  },
+  {
+    "name": "口頭報告數量",
+    "show": true,
+    "color": "#52e395",
+    "tagY": 150,
+    "history": [{"year":1993,"population":17},{"year":1994,"population":21},{"year":1995,"population":21},{"year":1996,"population":30},{"year":1997,"population":44},{"year":1998,"population":59},{"year":1999,"population":34},{"year":2000,"population":48},{"year":2001,"population":55},{"year":2002,"population":59},{"year":2003,"population":55},{"year":2004,"population":81},{"year":2005,"population":69},{"year":2006,"population":86},{"year":2007,"population":75},{"year":2008,"population":96},{"year":2009,"population":100},{"year":2010,"population":129},{"year":2011,"population":117},{"year":2012,"population":138},{"year":2013,"population":142},{"year":2014,"population":126},{"year":2015,"population":155},{"year":2016,"population":124},{"year":2017,"population":155}]
+  },
+  {
+    "name": "海報數量",
+    "show": true,
+    "color": "#e59afc",
+    "tagY": 170,  
+    "history": [{"year":1993,"population":0},{"year":1994,"population":0},{"year":1995,"population":0},{"year":1996,"population":0},{"year":1997,"population":0},{"year":1998,"population":13},{"year":1999,"population":41},{"year":2000,"population":39},{"year":2001,"population":34},{"year":2002,"population":45},{"year":2003,"population":41},{"year":2004,"population":61},{"year":2005,"population":42},{"year":2006,"population":64},{"year":2007,"population":94},{"year":2008,"population":132},{"year":2009,"population":126},{"year":2010,"population":170},{"year":2011,"population":171},{"year":2012,"population":153},{"year":2013,"population":150},{"year":2014,"population":151},{"year":2015,"population":168},{"year":2016,"population":164},{"year":2017,"population":165}]
+
+  }
+]

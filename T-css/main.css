@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+/* clearfix可以加在這，也可以放在reset CSS，還不太懂是什麼 */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+/* 各裝置共同樣式與小尺寸裝置樣式 */
+
+h2 {
+    text-align: center;
+}
+
+header {
+    background-image: url(../images/bg.jpg);
+    margin-top: -10px;
+    padding-top: 150px;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center center;
+    min-height: 600px;
+    width: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-bottom: 100px;
+    color: #ffffff;
+}
+
+#counter {
+    font-size: 66px;
+}
+
+#p2 {
+    margin-top: 0px;
+    padding-top: 10px;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 600px;
+    width: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#p4,
+#p6 {
+    margin-top: 0px;
+    padding-top: 10px;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 400px;
+    width: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#p1,
+#p3,
+#p5 {
+    background-color: #31c6c6;
+    color: #ffffff;
+    margin-top: 0px;
+    padding-top: 10px;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 30px;
+    width: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#p1 h2,
+#p3 h2,
+#p5 h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#p3 h3,
+#p5 h3 {
+    color: white;
+}
+
+#p2 h2,
+#p4 h2,
+#p6 h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p{
+margin-left: auto;
+margin-right: auto;
+width: 94%;  
+}
+
+img {
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+tspan {
+  font-size: 14px;
+}
+
+#footer {
+  height: 50px;
+    background-color: #31c6c6;
+    color: #ffffff;
+    margin-top: 0px;
+    padding-top: 10px;
+    background-attachment: relative;
+    background-position: center center;
+    width: 100%;
+}
+
+.fb-share-button {
+  line-height: 20px;
+}
+
+/* 不同尺寸裝置，媒體查詢 Media Queries 的切換樣式 */
+
+
+/* 中尺寸樣式：769~960 px (暫定) */
+
+@media only screen and (min-width: 769px) {
+
+    #counter {
+        font-size: 120px;
+    }
+
+    img {
+        margin: 0px auto;
+        width: 60%;
+    }
+}
+
+/* 大尺寸樣式：961px以上(暫定) */
+
+@media only screen and (min-width: 961px) {}
