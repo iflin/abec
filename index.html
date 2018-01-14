@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="zh-TW">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="T-css/main.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="js/d3.min.js"></script>
+    
     <title>動物行為研討會回顧</title>
 
     <!--    <meta property="og:image:url" content="http://g0v.github.io/cuora/img/fb-share.png" />-->
@@ -42,7 +45,7 @@
         <svg id="paper_line" width='600' height='400'></svg>
         <!--        <div id='line_tooltip' style='position:absolute;background-color:#151010;padding:5px'></div>-->
         <!-- 加入D3js折線圖js部分 -->
-        <script src="assets/js/d3.min.js"></script>
+
         <script src="line/D3_line.js"></script>
         <style>
             #paper_line {
@@ -177,8 +180,8 @@
 
         <!-- Footer -->
         <footer id="footer">
-            <h2 class="ui header">歡迎一起加入或分享
-                <div class="fb-share-button" data-href="http://g0v.github.io/cuora/" data-layout="button_count"></div>
+            <h2>歡迎一起加入或分享
+                <div class="fb-share-button" data-href="https://github.com/iflin/abec" data-layout="button_count"></div>
             </h2>
         </footer>
         <div id="fb-root"></div>
