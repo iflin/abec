@@ -25,7 +25,7 @@ line_chart.append('g').attr('transform', 'translate(0,' + height_line + ')').cal
 //line_chart.append('text').html('歷屆投稿文章數量').attr('id','gtitle').attr('x', 20).attr('y', -5);//圖標題
   
 // Load the data and draw a chart
-let states, tipBox;
+var states, tipBox;
 d3.json('line/year-papers.json', d => {
   states = d;
 
