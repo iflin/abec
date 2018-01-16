@@ -26,7 +26,7 @@
             .append("g")
             .attr("transform", "translate(" + margin_bar.left + "," + margin_bar.top + ")");
 
-        d3.tsv("/bar/data.tsv", type, function (error, data) {
+        d3.tsv("bar/data.tsv", type, function (error, data) {
             if (error) throw error;
 
             x_bar.domain(data.map(function (d) {
