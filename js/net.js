@@ -75,22 +75,22 @@
         node
             .attr("transform", function (d) {return "translate(" + d.x + ", " + d.y + ")";});
 
-        edgepaths.attr('d', function (d) {
-            return 'M ' + d.source.x + ' ' + d.source.y + ' L ' + d.target.x + ' ' + d.target.y;
-        });
-
-        edgelabels.attr('transform', function (d) {
-            if (d.target.x < d.source.x) {
-                var bbox = this.getBBox();
-
-                rx = bbox.x + bbox.width / 2;
-                ry = bbox.y + bbox.height / 2;
-                return 'rotate(180 ' + rx + ' ' + ry + ')';
-            }
-            else {
-                return 'rotate(0)';
-            }
-        });
+//        edgepaths.attr('d', function (d) {
+//            return 'M ' + d.source.x + ' ' + d.source.y + ' L ' + d.target.x + ' ' + d.target.y;
+//        });
+//
+//        edgelabels.attr('transform', function (d) {
+//            if (d.target.x < d.source.x) {
+//                var bbox = this.getBBox();
+//
+//                rx = bbox.x + bbox.width / 2;
+//                ry = bbox.y + bbox.height / 2;
+//                return 'rotate(180 ' + rx + ' ' + ry + ')';
+//            }
+//            else {
+//                return 'rotate(0)';
+//            }
+//        });
     }
 
     function dragstarted(d) {
