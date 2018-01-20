@@ -9,6 +9,7 @@
     outline: 0;
 }
 
+
 /* 各裝置共同樣式與小尺寸裝置樣式 */
 
 h2 {
@@ -18,7 +19,7 @@ h2 {
 header {
     background-image: url(../images/bg.jpg);
     margin-top: -10px;
-    padding-top: 150px;
+    padding-top: 100px;
     text-align: center;
     background-attachment: fixed;
     background-position: center center;
@@ -33,11 +34,7 @@ header {
     -o-background-size: cover;
     background-size: cover;
     padding-bottom: 100px;
-    color: #ffffff;
-}
-
-#counter {
-    font-size: 66px;
+    color: #000000;
 }
 
 #p2 {
@@ -96,30 +93,31 @@ header {
     background-size: cover;
 }
 
-#p1 h2,
-#p3 h2,
-#p5 h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: white;
-}
-
-#p3 h3,
-#p5 h3 {
-    color: white;
-}
-
-#p2 h2,
-#p4 h2,
-#p6 h2 {
+#p1 h1,
+#p3 h1,
+#p5 h1 {
+    text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-p{
-margin-left: auto;
-margin-right: auto;
-width: 94%;  
+#p2 h1,
+#p4 h1,
+#p6 h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 16px;
+    width: 90%;
+}
+
+#p3_warning {
+    font-style: oblique
 }
 
 img {
@@ -128,12 +126,20 @@ img {
     margin-top: 10px;
 }
 
-tspan {
-  font-size: 14px;
+#paper_line {
+    padding-left: 5%;
+}
+
+ul {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 16px;
+    width: 90%;
+    padding-left: 10%;
 }
 
 #footer {
-  height: 50px;
+    height: 50px;
     background-color: #31c6c6;
     color: #ffffff;
     margin-top: 0px;
@@ -144,8 +150,59 @@ tspan {
 }
 
 .fb-share-button {
-  line-height: 20px;
+    line-height: 20px;
 }
+
+
+/*滑鼠滾動icon*/
+
+.scroll-downs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding-top: 500px;
+    width: 34px;
+    height: 55px;
+}
+
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #ffffff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
 
 /* 不同尺寸裝置，媒體查詢 Media Queries 的切換樣式 */
 
@@ -153,17 +210,31 @@ tspan {
 /* 中尺寸樣式：769~960 px (暫定) */
 
 @media only screen and (min-width: 769px) {
-
     #counter {
         font-size: 120px;
     }
-
     img {
         margin: 0px auto;
         width: 60%;
     }
 }
 
+
 /* 大尺寸樣式：961px以上(暫定) */
 
-@media only screen and (min-width: 961px) {}
+@media only screen and (min-width: 961px) {
+    header h1 {
+        font-size: 48px;
+    }
+    
+    header p {
+        font-size: 22px;
+    }
+    
+    header {
+        padding-top: 80px;
+    }
+    ul {
+        padding-left: 4%;
+    }
+}
