@@ -60,7 +60,7 @@ header {
     padding-top: 10px;
     background-attachment: relative;
     background-position: center center;
-    min-height: 400px;
+    min-height: 300px;
     width: 100%;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -117,12 +117,11 @@ p {
 }
 
 #p1 iframe {
-
     margin-left: 2%;
 }
 
-#people_net text{
-background-color:white;
+#people_net text {
+    background-color: white;
 }
 
 #warning {
@@ -235,20 +234,44 @@ ul {
     header h1 {
         font-size: 48px;
     }
-    
     header p {
         font-size: 22px;
     }
-    
     header {
         padding-top: 80px;
     }
-    
     #p1 iframe {
+        margin-left: 4%;
+        align-content: center;
+    }
+    /*   用grid排版-電腦版，參考http://muki.tw/tech/css-grid-note/*/
+    #p1 .grid-box,
+    #p2 .grid-box{
+        display: grid;
+        /* 設定 CSS grid 的第一步 */
+        grid-template-columns: 40% 60%;
+        /*設定 Grid 的寬度*/
 
-    margin-left: 4%;
-    align-content: center;
-}
+    }
+
+    #p6 .grid-box
+    {
+        display: grid;
+        /* 設定 CSS grid 的第一步 */
+        grid-template-columns: 32% 32% 32%;
+        /*設定 Grid 的寬度*/
+
+    }
+    
+    #p3 p,
+    #p4 p,
+    #p5 p
+    {
+    
+    width:50%;
+        
+    }
+    
     
     ul {
         padding-left: 4%;
