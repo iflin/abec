@@ -7,6 +7,7 @@
     padding: 0;
     border: 0;
     outline: 0;
+    font-family:serif, Microsoft JhengHei;
 }
 
 
@@ -109,7 +110,15 @@ header {
     margin-bottom: 10px;
 }
 
-p {
+header p,
+#p1 p,
+#p2 p,
+#p3 p,
+#p4-p,
+#p5 p,
+#p6 p,
+footer p
+{
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 16px;
@@ -264,7 +273,7 @@ ul {
     }
     
     #p3 p,
-    #p4 p,
+    #p4-p,
     #p5 p
     {
     

@@ -431,12 +431,14 @@
                     "Year": "1986"
                 }];
  /*{ City_county: '高雄市', Site: '中山大學', Year: '2017' } */
-    var info_config=[];
+   
+            var info_config=[];
     info_config_0.forEach(function(e, i) {
-        info_config[i] = '<h3>'+info_config_0[i].City_county+'</h3>'+
-                        '<p>'+info_config_0[i].Site+'</p>'+
-                        '<p>'+info_config_0[i].Year+'年'+'</p>'
-       /* new google.maps.InfoWindow({
+        info_config[i] = '<h2>'+info_config_0[i].City_county+'</h2>'+
+                        '<p>'+info_config_0[i].Year+'年：'+info_config_0[i].Site+
+                        '</p>'
+  
+        /* new google.maps.InfoWindow({
                     content: e
                 }); */
             });

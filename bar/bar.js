@@ -7,7 +7,7 @@
             width_bar = 600 - margin_bar.left - margin_bar.right,
             height_bar = 400 - margin_bar.top - margin_bar.bottom;
 
-        var bar_tooltip = d3.select("#researcher").append("div").attr("id", "bar_toolTip");
+        var bar_tooltip = d3.select("#people_paper_bar").append("div").attr("id", "bar_toolTip");
 
         var x_bar = d3.scaleBand()
             .range([0, width_bar], .1);
@@ -71,9 +71,9 @@
                 })
                 .on("mousemove", function (d) {
                     bar_tooltip
-                        .style("left", d3.event.pageX - 50 + "px")
-                        .style("top", d3.event.pageY - 70 + "px")
-                        .style("display", "inline-block")
+                        .style("left", d3.event.pageX+ "px")
+                        .style("top", d3.event.pageY+ "px")
+//                        .style("display", "inline-block")
                         .html((d.letter) + "<br><span>" + (d.frequency / 4732) * 100 + "%" + "</span>");
                 })
                 .on("mouseout", function (d) {
