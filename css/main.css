@@ -116,6 +116,15 @@ p {
     width: 90%;
 }
 
+#p1 iframe {
+
+    margin-left: 2%;
+}
+
+#people_net text{
+background-color:white;
+}
+
 #p3_warning {
     font-style: oblique
 }
@@ -234,6 +243,13 @@ ul {
     header {
         padding-top: 80px;
     }
+    
+    #p1 iframe {
+
+    margin-left: 4%;
+    align-content: center;
+}
+    
     ul {
         padding-left: 4%;
     }

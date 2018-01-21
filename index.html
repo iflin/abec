@@ -73,36 +73,8 @@
         <p> 從1993年的第四屆研討會，到2017年，已經累積 XXXX 篇投稿文章。每年的投稿篇數，在2002年時超過100篇，2010年至2017年則維持在300篇左右。
         </p>
 
-        <!-- 加入D3js折線圖html部分 -->
-        <svg id="paper_line" width='600' height='400'></svg>
-        <!--        <div id='line_tooltip' style='position:absolute;background-color:#151010;padding:5px'></div>-->
-        <!-- 加入D3js折線圖js部分 -->
-
-        <script src="line/D3_line.js"></script>
-        <style>
-            #paper_line {
-                background-color: #624343;
-            }
-            /* xy軸-軸線與文字設定 */
-            
-            #paper_line g.tick,
-            #paper_line g line,
-            #paper_line g path.domain {
-                stroke: white;
-            }
-            /*折線圖標題設定*/
-            
-            #gtitle {
-                stroke: white;
-                font-size: 30px;
-            }
-            
-            #line_tooltip {
-                position: absolute;
-                background-color: #151010;
-                padding: 5px;
-            }
-        </style>
+           <iframe src="https://plotdb.io/v/chart/16719" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+    
     </div>
 
     <!--研究者投稿數量-->
@@ -157,6 +129,14 @@
 
         <div id="gmap" style="height:460px;"></div>
         <script src="gmap/gmap.js"></script>
+        
+            <!--標記能群集的外掛-->
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+        
+        var markerCluster = new MarkerClusterer(map, markers, {
+                imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+        
+        </script>
 
         <!--加入個人Key的API，同時可以在這裡強制顯示語言-->
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHao1N9YfzitGdDvPRzVZN9HNiCu00p7Y&language=zh-tw&region=tw&callback=initMap"></script>

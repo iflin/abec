@@ -55,6 +55,7 @@
         //圓圈的名字的位置//
         node.append("text")
             .attr("dy", -8)
+            .attr("style", "fill: #ffffff")
             .text(function (d) {return d.name;});
 
         simulation
