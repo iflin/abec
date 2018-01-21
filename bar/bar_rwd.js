@@ -1,4 +1,5 @@
   // SETUP
+      var bar_tooltip = d3.select("#p2").append("div").attr("id", "bar_tooltip");
 
 
   var svg_bar = d3.select("#people_paper_bar"),
@@ -13,7 +14,6 @@
       theData = undefined;
 
 
-      var bar_tooltip = d3.select("#p2").append("div").attr("id", "bar_tooltip");
 
 
   var g = svg_bar.append("g")
