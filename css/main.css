@@ -266,12 +266,20 @@ ul {
         align-content: center;
     }
     /*   用grid排版-電腦版，參考http://muki.tw/tech/css-grid-note/*/
-    #p1 .grid-box,
-    #p2 .grid-box{
+    #p1 .grid-box{
         
         display: grid;
         /* 設定 CSS grid 的第一步 */
         grid-template-columns: 40% 60%;
+        /*設定 Grid 的寬度*/
+
+    }
+    
+    #p2 .grid-box{
+        
+        display: grid;
+        /* 設定 CSS grid 的第一步 */
+        grid-template-columns: 43% 57%;
         /*設定 Grid 的寬度*/
 
     }
