@@ -4,22 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <!-- 給google看 -->
+    <meta name="author" content="If if.lin87048@gmail.com">
+    <meta name="copyright" content="If if.lin87048@gmail.com">
+    <meta name="description" content="歷年動物行為研討會資料整理與分析">
+    <meta itemprop="name" content="動物行為研討會資料整理與回顧">
+    <meta itemprop="image" content="https://iflin.github.io/abec/images/fb_cover.jpeg">
+    <meta itemprop="description" content="歷年動物行為研討會資料整理與分析">
+    <!--給FB看-->
+    <meta property="og:title" content="動物行為研討會資料整理與回顧">
+    <meta property="og:url" content="https://iflin.github.io/abec">
+    <meta property="og:image" content="https://iflin.github.io/abec/images/fb_cover.jpeg">
+    <meta property="og:description" content="歷年動物行為研討會資料整理與分析">
 
-<!-- 給google看 -->
-<meta name="author" content="If if.lin87048@gmail.com">
-<meta name="copyright" content="If if.lin87048@gmail.com">
-
-<meta name="description" content="歷年動物行為研討會資料整理與分析">
-
-<meta itemprop="name" content="動物行為研討會資料整理與回顧">
-<meta itemprop="image" content="https://iflin.github.io/abec/images/fb_cover.jpeg">
-<meta itemprop="description" content="歷年動物行為研討會資料整理與分析">
-<!--給FB看-->
-<meta property="og:title" content="動物行為研討會資料整理與回顧" >
-<meta property="og:url" content="https://iflin.github.io/abec">
-<meta property="og:image" content="https://iflin.github.io/abec/images/fb_cover.jpeg">
-<meta property="og:description" content="歷年動物行為研討會資料整理與分析" >
-    
 
     <link rel="stylesheet" href="css/main.css">
     <script src="js/d3.min.js"></script>
@@ -63,62 +60,65 @@
 
     <!--投稿文章數量-->
     <div id=p1>
-       <div class="grid-box">
-        <div>
-        <h1>歷屆投稿文章數量</h1>
-        <p>
-            研討會舉辦初期，只有口頭發表的投稿形式，到了1998年之後，才加入海報發表的投稿。初期都是口頭報告的投稿數，多於海報投稿。直到2007年後，海報發表的數量才超越口頭報告。</p>
-        <p>從1993年的第四屆研討會，到2017年，已經累積 4060 篇投稿文章。而每年的投稿篇數，在2002年時超過100篇，之後快速成長，自2010年至2017年間，則維持在300篇上下。
-        </p>
-        </div>
+        <div class="grid-box">
+            <div>
+                <h1>歷屆投稿文章數量</h1>
+                <p>
+                    研討會舉辦初期，只有口頭發表的投稿形式，到了1998年之後，才加入海報發表的投稿。初期都是口頭報告的投稿數，多於海報投稿。直到2007年後，海報發表的數量才超越口頭報告。</p>
+                <p>從1993年的第四屆研討會，到2017年，已經累積 4060 篇投稿文章。而每年的投稿篇數，在2002年時超過100篇，之後快速成長，自2010年至2017年間，則維持在300篇上下。
+                </p>
+            </div>
 
-        <iframe src="https://plotdb.io/v/chart/16719" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+            <iframe src="https://plotdb.io/v/chart/16719" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
         </div>
 
     </div>
 
     <!--研究者投稿數量-->
     <div id=p2>
-       
-       <div class="grid-box">
-        
-        <div>
-        <h1>研究者投稿數量</h1>
-        <p>1993年第四屆研討會到2017年之間，總共有4732位研究者曾投稿參加研討會。其中只投稿過一篇的研究者有2971位，佔總人數的62.79%；而曾投稿超過5篇以上的研究者，則有437位，佔總人數的9.23%。</p>
 
-        <p id="warning">註：由於中英文姓名比對問題，此圖資料只包含有用中文姓名發表的文章。如果只用英文名發表的文章，則尚未被計入，因此，此圖結果會低估真實情形。</p>
+        <div class="grid-box">
+
+            <div>
+                <h1>研究者投稿數量</h1>
+                <p>1993年第四屆研討會到2017年之間，總共有4732位研究者曾投稿參加研討會。其中只投稿過一篇的研究者有2971位，佔總人數的62.79%；而曾投稿超過5篇以上的研究者，則有437位，佔總人數的9.23%。</p>
+
+                <p id="warning">註：由於中英文姓名比對問題，此圖資料只包含有用中文姓名發表的文章。如果只用英文名發表的文章，則尚未被計入，因此，此圖結果會低估真實情形。</p>
+            </div>
+
+            <div width="100%" height="500px">
+                <svg width="100%" height="500px" id="people_paper_bar"></svg>
+                <script src="bar/bar_rwd.js"></script>
+                <style>
+                    text {
+                        font-family: sans-serif;
+                    }
+                    
+                    .bar {
+                        fill: #604020;
+                    }
+                    
+                    .bar:hover {
+                        fill: steelblue;
+                    }
+                    
+                    .axis--x path {
+                        display: none;
+                    }
+                </style>
+
+            </div>
+
         </div>
-
-        <div width="100%" height="500px">
-            <svg width="100%" height="500px" id="people_paper_bar"></svg>
-            <script src="bar/bar_rwd.js"></script>
-            <style>
-                text {
-                    font-family: sans-serif;
-                }
-                
-                .bar {
-                    fill: #604020;
-                }
-                
-                .bar:hover {
-                    fill: steelblue;
-                }
-                
-                .axis--x path {
-                    display: none;
-                }
-            </style>
-
-        </div>
-
     </div>
-       </div>
 
     <!--研究者投稿數與合作關係-->
-    <div id=p3>
+    <div id="p3">
         <h1>研究者投稿數與合作關係</h1>
-        <p>這個網狀圖顯示，投稿5篇以上的研究者之間的合作關係。</br>圓圈的大小，代表這位研究者的投稿篇數；研究者之間的連線，代表兩位研究者曾經在研討會共同發表文章的數量，共同發表文章數越多，連結線寬度越寬。而圓圈顏色為隨機著色，沒有特定意義</p>
+        <p>這個網狀圖顯示，投稿5篇以上的研究者之間的合作關係。</br>圓圈的大小，代表這位研究者的投稿篇數；研究者之間的連線，代表兩位研究者曾經在研討會共同發表文章的數量，共同發表文章數越多，連結線寬度越寬。而圓圈顏色為隨機著色，沒有特定意義。</p>
+        <p>可以拉動圓圈探索，
+            <a href="network.html" target="_blank" style="text-decoration:none;color:red;">也可以點選這裡放大探索。</a>
+        </p>
         <p id="warning">註：由於中英文姓名比對問題，此圖資料只包含有用中文姓名發表的文章。如果只用英文名發表的文章，則尚未被計入，所以此圖結果會低估真實情形。</p>
 
         <svg id="people_net" width="960" height="600"></svg>
@@ -167,35 +167,35 @@
 
     <!--更多資訊-->
     <div id=p6>
-       <div class="grid-box">
-        <div>
-        <h1>未來工作</h1>
+        <div class="grid-box">
+            <div>
+                <h1>未來工作</h1>
 
-        <p>本站內容還未全部完成，未來預計將增加以下幾項：</p>
-        <ul>
-            <li>尋找與加入首三屆研討會的資料</li>
-            <li>加入題目搜尋攻能</li>
-            <li>加入摘要資料</li>
-            <li>分析各研究類型</li>
-            <li>製作研討會歷史紀錄</li>
-            <li>其他更多應用</li>
-        </ul>
-        </div>
-        
-        <div>
-        <h1>關於我們</h1>
-        <p>這個網站的資料數位化、整理與架設，是由一群生命科學相關系所畢業的朋友，一起利用工作之餘的時間製作。希望這些資料能對後進研究者有幫助，或能給對生態研究有興趣者，提供一些資訊。</p>
-        <p>如果你有興趣後續的內容製作，歡迎一起加入。</p>
-            <p>一起幫忙製作的朋友們：</br>林奕甫、柯伶樺、陳淯茜、呂亞紋、蔡其芯、陳東、呂亞融、陳穎萱</p>
-        
-        </div>
-        
-        <div>
-        <h1>感恩的心</h1>
-        <p>在此特別感謝，姚正得老師、林思民老師、與林曜松老師3位的大力幫助。藉由他們的幫忙，讓我們能取得比較早期研討會的資料與訊息。</p>
-        </div>
+                <p>本站內容還未全部完成，未來預計將增加以下幾項：</p>
+                <ul>
+                    <li>尋找與加入首三屆研討會的資料</li>
+                    <li>加入題目搜尋攻能</li>
+                    <li>加入摘要資料</li>
+                    <li>分析各研究類型</li>
+                    <li>製作研討會歷史紀錄</li>
+                    <li>其他更多應用</li>
+                </ul>
+            </div>
 
-    </div>
+            <div>
+                <h1>關於我們</h1>
+                <p>這個網站的資料數位化、整理與架設，是由一群生命科學相關系所畢業的朋友，一起利用工作之餘的時間製作。希望這些資料能對後進研究者有幫助，或能給對生態研究有興趣者，提供一些資訊。</p>
+                <p>如果你有興趣後續的內容製作，歡迎一起加入。</p>
+                <p>一起幫忙製作的朋友們：</br>林奕甫、柯伶樺、陳淯茜、呂亞紋、蔡其芯、陳東、呂亞融、陳穎萱</p>
+
+            </div>
+
+            <div>
+                <h1>感恩的心</h1>
+                <p>在此特別感謝，姚正得老師、林思民老師、與林曜松老師3位的大力幫助。藉由他們的幫忙，讓我們能取得比較早期研討會的資料與訊息。</p>
+            </div>
+
+        </div>
     </div>
 
     <!-- Footer -->
@@ -205,7 +205,7 @@
         </h2>
     </footer>
     <div id="fb-root"></div>
-<!--
+    <!--
     <script>
         (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];

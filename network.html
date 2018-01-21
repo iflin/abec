@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>研究者共同發表網狀圖</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        /*        .node {}*/
+        
+        .link {
+            stroke: #7b7b7b;
+            stroke-opacity: .6;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+    <div>
+
+        <svg id="people_net" width="960" height="660"></svg>
+
+        <script src="js/d3.min.js"></script>
+        <script src="http://d3js.org/d3-selection-multi.v1.js"></script>
+
+        <script type="text/javascript">
+            var colors = d3.scaleOrdinal(d3.schemeCategory20c);
+
+
+            var svg = d3.select("#people_net"),
+                width = +svg.attr("width"),
+                height = +svg.attr("height"),
+                node,
+                link;
+
+
+            var simulation = d3.forceSimulation()
+                .force("link", d3.forceLink().id(function(d) {
+                    return d.id;
+                }).distance(100).strength(1))
+                .force("charge", d3.forceManyBody())
+                .force("center", d3.forceCenter(width / 2, height / 2));
+
+            //讀入json資料//
+            d3.json("network/network.json", function(error, graph) {
+                if (error) throw error;
+                update(graph.links, graph.nodes);
+            })
+
+            function update(links, nodes) {
+                link = svg.selectAll(".link")
+                    .data(links)
+                    .enter()
+                    .append("line")
+                    .attr("class", "link")
+                    .style("stroke-width", function(d) {
+                        return d.value;
+                    }) //線的寬度//
+
+
+                node = svg.selectAll(".node")
+                    .data(nodes)
+                    .enter()
+                    .append("g")
+                    .attr("class", "node")
+                    .call(d3.drag()
+                        .on("start", dragstarted)
+                        .on("drag", dragged)
+                        //                    .on("end", dragended)
+                    );
+
+                node.append("circle")
+                    .attr("r", function(d) {
+                        return (d.N_report / 2);
+                    }) //圓圈大小
+                    .style("fill", function(d, i) {
+                        return colors(i);
+                    })
+
+                //圓圈的名字//
+                node.append("title")
+                    .text(function(d) {
+                        return d.id;
+                    });
+
+                //圓圈的名字的位置//
+                node.append("text")
+                    .attr("dy", -8)
+                    .text(function(d) {
+                        return d.name;
+                    });
+
+                simulation
+                    .nodes(nodes)
+                    .on("tick", ticked);
+
+                simulation.force("link")
+                    .links(links);
+            }
+
+            function ticked() {
+                link
+                    .attr("x1", function(d) {
+                        return d.source.x;
+                    })
+                    .attr("y1", function(d) {
+                        return d.source.y;
+                    })
+                    .attr("x2", function(d) {
+                        return d.target.x;
+                    })
+                    .attr("y2", function(d) {
+                        return d.target.y;
+                    });
+
+                node
+                    .attr("transform", function(d) {
+                        return "translate(" + d.x + ", " + d.y + ")";
+                    });
+
+
+            }
+
+            function dragstarted(d) {
+                if (!d3.event.active) simulation.alphaTarget(0.3).restart()
+                d.fx = d.x;
+                d.fy = d.y;
+            }
+
+            function dragged(d) {
+                d.fx = d3.event.x;
+                d.fy = d3.event.y;
+            }
+        </script>
+    </div>
+
+
+    <!--回到上一頁-->
+    <input type="button" onclick="javascript:location.href='https://iflin.github.io/abec'" value="回到歷屆動行研討會頁面"></input>
+
+    <style>
+        #people_net {
+            width: 96%;
+            align-content: center;
+            margin-left: 2%;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #3e3e3e;
+        }
+        
+        input {
+            background: #ffd9d9;
+            background-image: -webkit-linear-gradient(top, #ffd9d9, #ffd9d9);
+            background-image: -moz-linear-gradient(top, #ffd9d9, #ffd9d9);
+            background-image: -ms-linear-gradient(top, #ffd9d9, #ffd9d9);
+            background-image: -o-linear-gradient(top, #ffd9d9, #ffd9d9);
+            background-image: linear-gradient(to bottom, #ffd9d9, #ffd9d9);
+            -webkit-border-radius: 10;
+            -moz-border-radius: 10;
+            border-radius: 10px;
+            font-family: Arial;
+            color: #000000;
+            font-size: 24px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+            margin-left: 2%;
+        }
+        
+        input:hover {
+            background: #fcb8b8;
+            background-image: -webkit-linear-gradient(top, #fcb8b8, #fcb8b8);
+            background-image: -moz-linear-gradient(top, #fcb8b8, #fcb8b8);
+            background-image: -ms-linear-gradient(top, #fcb8b8, #fcb8b8);
+            background-image: -o-linear-gradient(top, #fcb8b8, #fcb8b8);
+            background-image: linear-gradient(to bottom, #fcb8b8, #fcb8b8);
+            text-decoration: none;
+        }
+    </style>
+
+
+</body>
+
+</html>

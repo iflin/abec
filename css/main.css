@@ -129,6 +129,18 @@ footer p
     margin-left: 2%;
 }
 
+
+#people_net{
+    width: 90%;
+    align-content: center;
+    margin-left: 5%;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: #4a3826;
+}
+
+
+
 #people_net text {
     background-color: white;
 }
@@ -256,6 +268,7 @@ ul {
     /*   用grid排版-電腦版，參考http://muki.tw/tech/css-grid-note/*/
     #p1 .grid-box,
     #p2 .grid-box{
+        
         display: grid;
         /* 設定 CSS grid 的第一步 */
         grid-template-columns: 40% 60%;
@@ -281,6 +294,11 @@ ul {
         
     }
     
+    #people_net{
+    width: 96%;
+    align-content: center;
+    margin-left: 2%;
+}
     
     ul {
         padding-left: 4%;
