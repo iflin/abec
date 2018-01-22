@@ -141,7 +141,8 @@ footer p
 
 
 #people_net text {
-    background-color: white;
+    color: #cccccc;
+    font-size: 11px;
 }
 
 #warning {

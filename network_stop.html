@@ -14,6 +14,11 @@
             stroke: #7b7b7b;
             stroke-opacity: .6;
         }
+        
+        #people_net {
+        
+            font-size:14px;
+        }
     </style>
 
 </head>
@@ -62,7 +67,7 @@
                     .append("line")
                     .attr("class", "link")
                     .style("stroke-width", function(d) {
-                        return (d.value/2);
+                        return (d.value / 2);
                     }) //線的寬度//
 
 
@@ -79,7 +84,7 @@
 
                 node.append("circle")
                     .attr("r", function(d) {
-                        return (d.N_report/2);
+                        return (d.N_report / 2);
                     }) //圓圈大小
                     .style("fill", function(d, i) {
                         return colors(i);
@@ -139,8 +144,6 @@
                 d.fx = d3.event.x;
                 d.fy = d3.event.y;
             }
-            
-            
         </script>
     </div>
 

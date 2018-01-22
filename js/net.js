@@ -32,7 +32,7 @@
             .append("line")
             .attr("class", "link")
             .style("stroke-width", function (d) {
-                return d.value;
+                return (d.value/2);
             }) //連結線的寬度//
             .style("stroke", "#a5a5a5") //連結線的顏色//
 
