@@ -62,7 +62,7 @@
                     .append("line")
                     .attr("class", "link")
                     .style("stroke-width", function(d) {
-                        return d.value;
+                        return (d.value/2);
                     }) //線的寬度//
 
 
@@ -79,7 +79,7 @@
 
                 node.append("circle")
                     .attr("r", function(d) {
-                        return (d.N_report / 2);
+                        return (d.N_report/2);
                     }) //圓圈大小
                     .style("fill", function(d, i) {
                         return colors(i);
