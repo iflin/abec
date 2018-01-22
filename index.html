@@ -21,6 +21,8 @@
 
     <link rel="stylesheet" href="css/main.css">
     <script src="js/d3.min.js"></script>
+<!--    為了製作滑動效果-->
+    <script src="js/jquery-3.3.1.min.js"></script>
 
     <title>動物行為研討會資料與回顧</title>
 
@@ -68,11 +70,29 @@
 
         <!--滑鼠滾動icon-->
         <div class="scroll-downs">
-            <div class="mousey">
+        <a href="#p1">   <div class="mousey">
                 <div class="scroller"></div>
-            </div>
+            </div></a> 
         </div>
 
+<!--   點選滑鼠滾動icon後，滑動效果，使用jQuery-->
+      <script>
+       $(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+   
     </header>
 
     <!--投稿文章數量-->
