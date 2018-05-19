@@ -16,12 +16,12 @@
     <meta property="og:url" content="https://iflin.github.io/abec">
     <meta property="og:image" content="https://iflin.github.io/abec/images/fb_cover.jpeg">
     <meta property="og:description" content="歷年動物行為研討會資料整理與分析">
-    <meta property="og:type" content="website"> 
+    <meta property="og:type" content="website">
 
 
     <link rel="stylesheet" href="css/main.css">
     <script src="js/d3.min.js"></script>
-<!--    為了製作滑動效果-->
+    <!--    為了製作滑動效果-->
     <script src="js/jquery-3.3.1.min.js"></script>
 
     <title>動物行為研討會資料與回顧</title>
@@ -41,7 +41,7 @@
     <![endif]-->
 
     <!-- Hotjar Tracking Code for https://iflin.github.io/abec/ -->
-<!--
+    <!--
     <script>
         (function(h, o, t, j, a, r) {
             h.hj = h.hj || function() {
@@ -72,33 +72,35 @@
 
         <!--滑鼠滾動icon-->
         <div class="scroll-downs">
-        <a href="#p1">   <div class="mousey">
-                <div class="scroller"></div>
-            </div></a> 
+            <a href="#p1">
+                <div class="mousey">
+                    <div class="scroller"></div>
+                </div>
+            </a>
         </div>
 
-<!--   點選滑鼠滾動icon後，滑動效果，使用jQuery-->
-      <script>
-       $(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-</script>
-   
+        <!--   點選滑鼠滾動icon後，滑動效果，使用jQuery-->
+        <script>
+            $(function() {
+                $('a[href*="#"]:not([href="#"])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html, body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
+        </script>
+
     </header>
 
     <!--投稿文章數量-->
-<div id=p1>
+    <div id=p1>
         <div class="grid-box">
             <div>
                 <h1>歷屆投稿文章數量</h1>
@@ -109,6 +111,7 @@
             </div>
 
             <iframe src="https://plotdb.io/v/chart/16719" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+
         </div>
 
     </div>
@@ -125,26 +128,15 @@
                 <p id="warning">註：由於中英文姓名比對問題，此圖資料只包含有用中文姓名發表的文章。如果只用英文名發表的文章，則尚未被計入，因此，此圖結果會低估真實情形。</p>
             </div>
 
-            <div width="100%" height="500px">
-                <svg width="100%" height="500px" id="people_paper_bar"></svg>
+            <div>
+
+                <iframe src="https://plotdb.io/v/chart/17102" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+                
+                <!-- 這兩行code原本有問題，自己寫的長條圖，原本要用plotdb的長條圖取代，也就上面那行 iframe-->
+                <!-- 但是如果拿掉這兩行code，下面的網狀圖卻會無法出現，一下子找不出原因。-->
+                <!-- 所以把這兩行code留著，但是不給高度，隱藏起來。-->
+                <svg width="100%" height="0px" id="people_paper_bar"></svg>
                 <script src="bar/bar_rwd.js"></script>
-                <style>
-                    text {
-                        font-family: sans-serif;
-                    }
-                    
-                    .bar {
-                        fill: #604020;
-                    }
-                    
-                    .bar:hover {
-                        fill: steelblue;
-                    }
-                    
-                    .axis--x path {
-                        display: none;
-                    }
-                </style>
 
             </div>
 
@@ -154,13 +146,13 @@
     <!--研究者投稿數與合作關係-->
     <div id="p3">
         <h1>研究者的合作關係</h1>
-<!--        <h1>(功能暫時關閉，資料整修中)</h1>-->
+        <!--        <h1>(功能暫時關閉，資料整修中)</h1>-->
 
         <p>（此圖較適合使用電腦觀看）</br>這個網狀圖顯示，投稿5篇以上的研究者，他們之間的合作關係。</br>圓圈的大小，代表這位研究者的投稿篇數；研究者之間的連線，代表兩位研究者曾經在研討會共同發表文章的數量，共同發表文章數越多，連結線寬度越寬。而圓圈顏色為隨機著色，沒有特定意義。</p>
 
         <p id="warning">註：由於中英文姓名比對問題，此圖資料只包含有用中文姓名發表的文章。如果只用英文名發表的文章，則尚未被計入，所以此圖結果會低估真實情形。</p>
 
-<p>圓圈可以拉動，拉到定點放開後，圓圈就會固定不動。由於研究者們合作緊密，建議使用瀏覽器的搜尋功能，利用名字搜尋，找出目標後再拉動。（未來會再增加縮放與自訂功能）
+        <p>圓圈可以拉動，拉到定點放開後，圓圈就會固定不動。由於研究者們合作緊密，建議使用瀏覽器的搜尋功能，利用名字搜尋，找出目標後再拉動。（未來會再增加縮放與自訂功能）
             <a href="https://iflin.github.io/abec/network.html" target="_blank" style="text-decoration:none;color:#5fff52;">也可以點選這裡放大探索。</a>
         </p>
 
@@ -229,8 +221,8 @@
                 <h1>關於我們</h1>
                 <p>這個網站的資料數位化、整理與架設，是由一群生命科學相關系所畢業的朋友，一起利用工作之餘的時間製作。希望這些資料能對後進研究者有幫助，或能給對生態研究有興趣者，提供一些資訊。</p>
                 <p>如果你有興趣後續的內容製作，歡迎一起加入。
-                </br><a href="https://www.facebook.com/abecHistory/">臉書專頁</a>
-                </br><a href="mailto:if.lin87048@gmail.com">與我們聯絡</a></p>
+                    </br><a href="https://www.facebook.com/abecHistory/">臉書專頁</a>
+                    </br><a href="mailto:if.lin87048@gmail.com">與我們聯絡</a></p>
                 <p>一起製作的朋友們：</br>林奕甫、柯伶樺、陳淯茜、呂亞紋、蔡其芯、陳東、呂亞融、陳穎萱</p>
 
             </div>
@@ -241,7 +233,7 @@
             </div>
 
         </div>
-                
+
     </div>
 
     <!-- Footer -->
@@ -249,7 +241,7 @@
         <h2>歡迎一起來跳坑或分享吧
             <div class="fb-share-button" data-href="https://iflin.github.io/abec/" data-layout="button_count"></div>
         </h2>
-        
+
     </footer>
     <div id="fb-root"></div>
 

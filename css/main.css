@@ -43,7 +43,7 @@ header {
     padding-top: 10px;
     background-attachment: relative;
     background-position: center center;
-    min-height: 600px;
+    min-height: 400px;
     width: 100%;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -134,9 +134,9 @@ footer p
     width: 90%;
     align-content: center;
     margin-left: 5%;
-    border-style: dotted;
+    border-style: double;
     border-width: 1px;
-    border-color: #4a3826;
+    border-color: #ffffff;
 }
 
 
