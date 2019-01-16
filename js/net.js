@@ -17,7 +17,7 @@
             return d.id;
         }).distance(100).strength(1))
         .force("charge", d3.forceManyBody())
-        .force("center", d3.forceCenter(width / 1.5, height / 3));//一開始出現的位置
+        .force("center", d3.forceCenter(width / 1.5, height / 1));//一開始出現的位置
 
     //讀入json資料//
     d3.json("network/network.json", function (error, graph) {
