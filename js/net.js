@@ -17,7 +17,7 @@
             return d.id;
         }).distance(100).strength(1))
         .force("charge", d3.forceManyBody())
-        .force("center", d3.forceCenter(width / 2, height / 2));
+        .force("center", d3.forceCenter(width / 1.5, height / 2));//一開始出現的位置
 
     //讀入json資料//
     d3.json("network/network.json", function (error, graph) {
@@ -52,9 +52,13 @@
             .attr("r", function (d) {
                 return (d.N_report / 2);
             }) //圓圈大小
-            .style("fill", function (d, i) {
-                return colors(i);
-            })
+            .style("fill",d => (
+                    d.N_report > 80 ? '#68a8d0' :
+                    d.N_report > 40 ? '#d1b2c9' :
+                    '#fdcfa2'))//圓圈顏色            
+//            .style("fill", function (d, i) {
+//                return colors(i);
+//            })
 
         //圓圈的名字//
         node.append("title")
