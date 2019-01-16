@@ -5,9 +5,9 @@
         //        width = svg.attr("width"),
         //        height = svg.attr("height"),
 
-        width = svg_bar.node().getBoundingClientRect().width - margin.left - margin.right,
+        width = svg.node().getBoundingClientRect().width - margin.left - margin.right,
 
-        height = svg_bar.node().getBoundingClientRect().height - margin.top - margin.bottom,
+        height = svg.node().getBoundingClientRect().height - margin.top - margin.bottom,
         node,
         link;
 
